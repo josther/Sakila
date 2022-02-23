@@ -34,11 +34,13 @@
 
     <div class="row g-5">
       <div class="col-md-6">
-        <h2>el proycto start</h2>
+        <h2>el proyecto start</h2>
         <p>Ready to beyond the starter template? Check out these open source projects that you can quickly duplicate to a new GitHub repository.</p>
         <ul class="icon-list">
-          <li><a href="https://github.com/twbs/bootstrap-npm-starter" rel="noopener" target="_blank">Bootstrap npm starter</a></li>
-          <li class="text-muted">Bootstrap Parcel starter (coming soon!)</li>
+          <li><a href="./explicaciones/">Explicaciones</a></li>
+          <li><a href="./ejercicios/">Ejercicios</a></li>
+          <li><a href=""></a></li>
+
         </ul>
       </div>
 
