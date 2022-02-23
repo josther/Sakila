@@ -16,7 +16,7 @@
 <body>
     <div class="containe w-50">
         <h5>5. Imprimir los números del 1 al 100</h5>
-        <from action="" method="get">
+        <form action="" method="get">
             <ul class="1 al 100">
                 <li></li>
                 <1></1>
@@ -121,8 +121,8 @@
                 <100></100>
             </ul>
 
-            <button class="btn btn-ligh">1 al 100</button>
-        </from>
+            <button class="btn btn-ligh"> 1 al 100</button>
+        </form>
 
         <?php
         

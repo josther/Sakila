@@ -19,7 +19,7 @@
         <form action="" method="get">
             <div class="mb-3">
                 <label for="">hipotenusa</label>
-                <imput type="text" nombre="hipotenusa" class="form-control">
+                <input type="text" name="hipotenusa" class="form-control">
             </div>
 
             <button class="btn btn-secondary">Resultado</button>

@@ -18,7 +18,7 @@
         <form action="" method="get">
             <div class="mb-3">
                 <label for="">Distancia Recorrida</label>
-                <imput type="text" nombre="correo" class="form-control">
+                <input type="text" name="Distancia Recorrida" class="form-control">
             </div>
 
             <button class="btn btn-danger">Resultado</button>

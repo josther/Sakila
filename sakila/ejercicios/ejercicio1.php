@@ -19,17 +19,17 @@
         <form action="" method="get">
             <div class="mb-3">
                 <label for="">Base</label>
-                <imput type="text" nombre="correo" class="form-control">
+                <input type="text" name="base" class="form-control">
             </div>
 
             <div class="mb-3">
                 <label for="">Altura</label>
-                <imput type="text" nombre="correo" class="form-control">
+                <input type="text" name="altura" class="form-control">
             </div>
 
             <div clas="mb-3">
                 <label for="">Hipotenusa</label>
-                <imput type="text" nombre="correo" class="form-control">
+                <input type="text" name="hiputenusa" class="form-control">
             </div>
 
             <button class="btn btn-dark">Calcular</button>
