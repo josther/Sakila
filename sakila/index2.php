@@ -27,7 +27,7 @@
     <p class="fs-5 col-md-8">Magit The Garderin es un juego de cartas parecido a yugio</p>
 
     <div class="mb-5">
-      <a href="/docs/5.1/examples/" class="btn btn-primary btn-lg px-4">Download examples</a>
+      <a href="/docs/5.1/examples/" class="btn btn-primary btn-lg px-4">Download magit the garderin</a>
     </div>
 
     <hr class="col-3 col-md-2 mb-5">

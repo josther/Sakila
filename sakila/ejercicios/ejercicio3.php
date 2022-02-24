@@ -17,9 +17,15 @@
         <h5>3. Calcular la distancia recorrida (Buscar formula de la distancia)</h5>
         <form action="" method="get">
             <div class="mb-3">
-                <label for="">Distancia Recorrida</label>
-                <input type="text" name="Distancia Recorrida" class="form-control">
+                <label for="">Velocidad</label>
+                <input type="text" name="Velocidad" class="form-control">
             </div>
+
+          <div class="mb-3">
+             <label for="">Tiempo</label>
+                <input type="text" name="Tiempo" class="form-control">
+            </div>
+            
 
             <button class="btn btn-danger">Resultado</button>
         </form>
