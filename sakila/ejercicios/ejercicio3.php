@@ -32,7 +32,11 @@
 
         <?php
         
-        print_r($_GET);
+          $Velocidad = $_GET["Velocidad"];
+          $Tiempo = $_GET["Tiempo"];
+
+          $Distancia = ($Velocidad * $Tiempo);
+          echo "$Distancia";
 
         ?>
     </div>

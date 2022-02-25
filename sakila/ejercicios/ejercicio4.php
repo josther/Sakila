@@ -28,7 +28,11 @@
 
         <?php
         
-        print_r($_GET);
+          $cateto1 = $_GET["cateto1"];
+          $cateto2 = $_GET["cateto2"];
+
+          $cateto3 = ($cateto1 + $cateto2);
+          echo "$cateto3";
         
         ?>
     </div>
