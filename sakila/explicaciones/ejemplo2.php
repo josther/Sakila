@@ -40,12 +40,10 @@
                 <th scope="row">1</th>
                 <th scope="col">...</th>
             </tr>
-            <br>
             <tr>
                 <th scope="row">2</th>
                 <th scope="col">...</th>
             </tr>
-            <br>
             <tr>
                 <th scope="row">3</th>
                 <th scope="col">...</th>
