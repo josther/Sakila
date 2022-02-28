@@ -27,7 +27,7 @@
     </div>
     <br>
 
-    <table class="default" WIDTH="50%" ALIGN="center">
+    <table ALIGN="center" class="default" WIDTH="50%">
         <h5 ALIGN="center">Listado de Idiomas</h5>
         <thead>
             <tr>

@@ -13,9 +13,10 @@
     <title>Hello, world!</title>
 </head>
 
-<body> 
+<body>
 
- <li class="nav-item">
+<ul class="nav">
+    <li class="nav-item">
         <a class="nav-link" href="./actores.php">Actores</a>
     </li>
     <li class="nav-item">
@@ -62,7 +63,13 @@
 
         <main>
             <h1>Magit The Garderin<i class="bi bi-sunset"></i></h1>
-            <p class="fs-5 col-md-8">Magit The Garderin es un juego de cartas parecido a yugio pero con siertas diferencias lo cual lo hace unico en magit the garderin, las cartas seclasifican en 5 colores rojas: que sirven para destrucion y equipo, no son tan destructivas como las cartas negras: se de dican adestruirte todas las cartas, mientras las verdes: funciona como equipa miento y una que otra para pontenciar tus cartas, los que juegan concartas blancas son los seres mas cobardes de tedos, tebloquean cartas, se sanan acadarato, no los soportos, mientras las azules: tambien bloquea cartas pero no tesanan
+            <p class="fs-5 col-md-8">Magit The Garderin es un juego de cartas parecido a yugio pero 
+                con siertas diferencias lo cual lo hace unico en magit the garderin, las cartas 
+                se clasifican en 5 colores rojas: que sirven para destrucion y equipo, no son tan 
+                destructivas como las cartas negras: se de dican adestruirte todas las cartas, 
+                mientras las verdes: funciona como equipa miento y una que otra para pontenciar tus 
+                cartas, los que juegan concartas blancas son los seres mas cobardes de tedos, 
+                tebloquean cartas, se sanan acadarato, no los soportos, mientras las azules: tambien bloquea cartas pero no tesanan
 </p>
 
             <div class="mb-5">

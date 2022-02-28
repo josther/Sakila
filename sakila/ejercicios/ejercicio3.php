@@ -21,23 +21,21 @@
                 <input type="text" name="Velocidad" class="form-control">
             </div>
 
-          <div class="mb-3">
-             <label for="">Tiempo</label>
+            <div class="mb-3">
+                <label for="">Tiempo</label>
                 <input type="text" name="Tiempo" class="form-control">
             </div>
-            
 
             <button class="btn btn-danger">Resultado</button>
         </form>
 
         <?php
-        
-          $Velocidad = $_GET["Velocidad"];
-          $Tiempo = $_GET["Tiempo"];
 
-          $Distancia = ($Velocidad * $Tiempo);
-          echo "$Distancia";
+            $Velocidad = $_GET["Velocidad"];
+            $Tiempo = $_GET["Tiempo"];
 
+            $Distancia = ($Velocidad * $Tiempo);
+            echo "$Distancia";
         ?>
     </div>
 </body>

@@ -18,8 +18,13 @@
         <h5>4. Calcular la hipotenusa de un triangulo</h5>
         <form action="" method="get">
             <div class="mb-3">
-                <label for="">hipotenusa</label>
-                <input type="text" name="hipotenusa" class="form-control">
+                <label for="">cateto1</label>
+                <input type="text" name="cateto1" class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="">cateto2</label>
+                <input type="text" name="cateto2" class="form-control">
             </div>
 
             <button class="btn btn-secondary">Resultado</button>
@@ -27,13 +32,13 @@
         </form>
 
         <?php
-        
-          $cateto1 = $_GET["cateto1"];
-          $cateto2 = $_GET["cateto2"];
 
-          $cateto3 = ($cateto1 + $cateto2);
-          echo "$cateto3";
-        
+            $cateto1 = $_GET["cateto1"];
+            $cateto2 = $_GET["cateto2"];
+
+            $cateto3 = ($cateto1 + $cateto2);
+            echo "$cateto3";
+
         ?>
     </div>
 </body>

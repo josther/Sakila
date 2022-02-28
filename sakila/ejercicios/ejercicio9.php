@@ -13,15 +13,15 @@
 </head>
 <body>
     <div for="container w-50">
-      <h5>Digitar un número y decir si es par impar</h5>
-      <form action="" method="get">
-        <div class="mb-3">
-          <label for="">Numero</label>
-          <input type="numero" name="Numero" class="form-control">
-        </div>
+        <h5>Digitar un número y decir si es par impar</h5>
+        <form action="" method="get">
+            <div class="mb-3">
+                <label for="">Numero</label>
+                <input type="numero" name="Numero" class="form-control">
+            </div>
 
-        <button class="btn btn-danger">par o impar</button>
-      </form>
+            <button class="btn btn-danger">par o impar</button>
+        </form>
     </div>
     
 </body>

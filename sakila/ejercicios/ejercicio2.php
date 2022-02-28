@@ -18,22 +18,22 @@
         <form action="" method="get">
             <div class="mb-3">
                 <label for="">nota1</label>
-              <input type="text" name="nota1">
+                <input type="text" name="nota1">
             </div>
 
             <div class="mb-3">
                 <label for="">nota2</label>
-              <input type="text" name="nota2">
+                <input type="text" name="nota2">
             </div>
 
             <div class="mb-3">
                 <label for="">nota3</label>
-              <input type="text" name="nota3">
+                <input type="text" name="nota3">
             </div>
 
             <div class="mb-3">
                 <label for="">nota4</label>
-              <input type="text" name="nota4">
+                <input type="text" name="nota4">
             </div>
 
             <button class="btn btn-success">promedio</button>
@@ -41,15 +41,16 @@
         </form>
 
         <?php
-          print_r($_GET);
-          $nota1 = $_GET["nota1"];
-          $nota2 = $_GET["nota2"];
-          $nota3 = $_GET["nota3"];
-          $nota4 = $_GET["nota4"];
 
-           $resultado = ($nota1 + $nota2 + $nota3 +$nota4) / 4;
+            $nota1 = $_GET["nota1"];
+            $nota2 = $_GET["nota2"];
+            $nota3 = $_GET["nota3"];
+            $nota4 = $_GET["nota4"];
+
+            $resultado = ($nota1 + $nota2 + $nota3 +$nota4) / 4;
             echo "$resultado";
         ?>
+        
     </div>
 </body>
 
