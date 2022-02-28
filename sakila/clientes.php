@@ -2,6 +2,4 @@
 
 $pagina="clientes";
 
-echo $pagina;
-
-?>
+require_once "vistas/vista_clientes";

@@ -2,6 +2,4 @@
 
 $pagina="tiendas";
 
-echo $pagina;
-
-?>
+require_once "vistas/vista_tiendas";

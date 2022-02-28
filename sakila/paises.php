@@ -2,6 +2,4 @@
 
 $pagina="paises";
 
-echo $pagina;
-
-?>
+require_once "vistas/vista_paises";

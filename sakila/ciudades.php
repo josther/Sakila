@@ -2,6 +2,4 @@
 
 $pagina="ciudades";
 
-echo $pagina;
-
-?>
+require_once "vistas/vista_ciudades";

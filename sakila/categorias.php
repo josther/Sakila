@@ -1,7 +1,5 @@
 <?php
 
-$pagina="categoria";
+$pagina="";
 
-echo $pagina;
-
-?>
+require_once "vistas/vista_categorias";
