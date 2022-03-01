@@ -34,10 +34,19 @@ require_once "parte_head.php";
                 <table class="table table-dark table table.striped">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">ID Pelicula</th>
+                            <th scope="col">titulo</th>
+                            <th scope="col">descripsion</th>
+                            <th scope="col">Año de lansamiento</th>
+                            <th scope="col">ID Idioma</th>
+                            <th scope="col">ID Idioma original</th>
+                            <th scope="col">duracion del alquiler</th>
+                            <th scope="col">Arrendamiento</th>
+                            <th scope="col">duracion</th>
+                            <th scope="col">Costo de remplazo</th>
+                            <th scope="col">clasificacion</th>
+                            <th scope="col">facturas especiales</th>
+                            <th scope="col">fecha actualisacion</th>
                         </tr>
                     </thead>
                     <tbody>

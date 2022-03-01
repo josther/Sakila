@@ -34,10 +34,10 @@ require_once "parte_head.php";
                 <table class="table table-dark table table.striped">
                     <thead>
                         <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">ID tienda</th>
+                            <th scope="col">identificación del personal del gerente</th>
+                            <th scope="col">identificación de la dirección</th>
+                            <th scope="col">fecha actualisacion</th>
                         </tr>
                     </thead>
                     <tbody>

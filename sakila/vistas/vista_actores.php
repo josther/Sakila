@@ -41,6 +41,26 @@ require_once "parte_head.php";
                         </tr>
                     </thead>
                     <tbody>
+
+                    <?php
+
+                    $query = "SELECR * FROM actor";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if (!$resultado) {
+                        while($fila = mysqli_fetch_assoc($resultado)) {
+                            echo "
+                            <tr>
+                                <td>${fila['actor_id']}</td>
+                                <td>${fila['first_name']}</td>
+                                <td>${fila['last_name']}</td>
+                                <td>${fila['last_update']}</td>
+                            </tr>";
+                        }
+                    }
+
+                    ?>
                         <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>
