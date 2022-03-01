@@ -1,5 +1,5 @@
 <?php
 
-$pagina="idiomas";
+$pagina="Idiomas";
 
-require_once "vistas/vista_idiomas";
+require_once "vistas/vista_idiomas.php";

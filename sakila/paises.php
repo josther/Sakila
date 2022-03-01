@@ -1,5 +1,5 @@
 <?php
 
-$pagina="paises";
+$pagina="Paises";
 
-require_once "vistas/vista_paises";
+require_once "vistas/vista_paises.php";

@@ -1,1 +1,1 @@
-FOOTER:aqui van los scripts
+FOOTER:aqui van los script

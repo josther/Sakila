@@ -1,5 +1,5 @@
 <?php
 
-$pagina="";
+$pagina="Categorias";
 
-require_once "vistas/vista_categorias";
+require_once "vistas/vista_categorias.php";
