@@ -41,6 +41,32 @@ require_once "parte_head.php";
                         </tr>
                     </thead>
                     <tbody>
+
+                    <?php 
+
+                    $query = "SELECt * FROM ciudades";
+
+                    $buscador = $_GET['buscador'] ?? "";
+                    if ($buscador != ""){
+                        $query = "SELECT * FROM ciudades WHERE first_name = '$buscador'";
+                    }
+
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while($fila = mysqli_fetch_object($resultado)) {
+                            echo "
+                            <tr>
+                                <td>{$fila->actor_id}</td>
+                                td>{$fila->first_name}</td>
+                                <td>{$fila->last_name}</td>
+                                <td>{$fila->last_update}</td>
+                            </tr>";
+                        }
+                    }
+
+                    ?>
                         <tr>
                             <th scope="row">1</th>
                             <td>Mark</td>

@@ -46,16 +46,22 @@ require_once "parte_head.php";
 
                     $query = "SELECR * FROM actor";
 
+                    $buscador = $_GET['buscador'] ?? "";
+                    if ($buscador != ""){
+                      $query = "SELECT * FROM actor WHERE first_name = '$buscador'";
+                    }
+
+
                     $resultado = mysqli_query($conexion, $query);
 
                     if (!$resultado) {
-                        while($fila = mysqli_fetch_assoc($resultado)) {
+                        while($fila = mysqli_fetch_object($resultado)) {
                             echo "
                             <tr>
-                                <td>${fila['actor_id']}</td>
-                                <td>${fila['first_name']}</td>
-                                <td>${fila['last_name']}</td>
-                                <td>${fila['last_update']}</td>
+                                <td>{$fila->actor_id}</td>
+                                <td>{$fila->first_name}</td>
+                                <td>{$fila->last_name}</td>
+                                <td>{$fila->last_update}</td>
                             </tr>";
                         }
                     }

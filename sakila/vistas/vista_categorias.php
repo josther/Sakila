@@ -47,6 +47,32 @@ require_once "parte_head.php";
                             <td>@mdo</td>
                         </tr>
                     </tbody>
+
+                                          <?php 
+
+                        $query = "SELECt * FROM categorias";
+
+                        $buscador = $_GET['buscador'] ?? "";
+                        if ($buscador != ""){
+                            $query = "SELECT * FROM categoria WHERE first_name = '$buscador'";
+                    }
+
+
+                        $resultado = mysqli_query($conexion, $query);
+
+                        if ($resultado) {
+                        while($fila = mysqli_fetch_object($resultado)) {
+                            echo "
+                            <tr>
+                                <td>{$fila->categoria_id}</td>
+                                td>{$fila->first_name}</td>
+                                <td>{$fila->last_name}</td>
+                                <td>{$fila->last_update}</td>
+                            </tr>";
+                        }
+                    }
+
+                    ?>
                 </table>
             </div>
         </div>
