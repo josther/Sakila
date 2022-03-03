@@ -16,6 +16,14 @@ require_once "parte_head.php";
             <form class="col-6 ">
                 aqui va el formulario
             </form>
+
+            <?php if (!empty($error)): ?>
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <?php echo $error; ?>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <?php endif; ?>
+            
         </div>
 
         <div class="row">
@@ -38,6 +46,7 @@ require_once "parte_head.php";
                             <th scope="col">ID Tienda</th>
                             <th scope="col">Nombre</th>
                             <th scope="col">Apellido</th>
+                            <th scope="col">correo electronico</th>
                             <th scope="col">ID Dirección</th>
                             <th scope="col">activa</th>
                             <th scope="col">Dato creado</th>
@@ -45,12 +54,37 @@ require_once "parte_head.php";
                         </tr>
                     </thead>
                     <tbody>
+                    
+                    <?php 
+
+                    $query = "SELECT * FROM customer";
+
+                    $buscador = $_GET['buscador'] ?? "";
+                    if ($buscador != ""){
+                        $query = "SELECT * FROM customer WHERE first_name = '$buscador'";
+                    }
+
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while($fila = mysqli_fetch_object($resultado)) {
+                        echo "
                         <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
+                            <td>{$fila->customer_id}</td>
+                            <td>{$fila->store_id}</td>
+                            <td>{$fila->first_name}</td>
+                            <td>{$fila->last_name}</td>
+                            <td>{$fila->email}</td>
+                            <td>{$fila->address_id}</td>
+                            <td>{$fila->active}</td>
+                            <td>{$fila->create_date}</td>
+                            <td>{$fila->last_update}</td>
+                        </tr>";
+                        }
+                    }
+
+                    ?>
                     </tbody>
                 </table>
             </div>
