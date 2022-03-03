@@ -12,7 +12,7 @@ require_once "parte_head.php";
     <div class="container">
         <h3><?php echo $pagina; ?></h3>
         <div class="row">
-            <form class="col-6 ">
+            <form class="col-6 " method="post">
                 <div class="mb-3">
                     <label for="">Nombre</label>
                     <input type="text" name="name" class="form-control">
