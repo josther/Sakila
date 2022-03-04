@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>juegos</title>
 </head>
 
 <body>
@@ -91,11 +91,11 @@
                 </div>
 
                 <div class="col-md-6">
-                    <h2></h2>
+                    <h2>legue of leguen</h2>
                     <p>Read more detailed instructions and documentation on using or contributing to Bootstrap.</p>
                     <ul class="icon-list">
-                        <li><a href="/docs/5.1/getting-started/introduction/">Bootstrap quick start guide</a></li>
-                        <li><a href="/docs/5.1/getting-started/webpack/">Bootstrap Webpack guide</a></li>
+                        <li><a href="./recursos/">recursos</a></li>
+                        <li><a href="./vistas/">vistas</a></li>
                         <li><a href="/docs/5.1/getting-started/parcel/">Bootstrap Parcel guide</a></li>
                         <li><a href="/docs/5.1/getting-started/contribute/">Contributing to Bootstrap</a></li>
                     </ul>
