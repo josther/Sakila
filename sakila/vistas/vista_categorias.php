@@ -19,7 +19,7 @@ require_once "parte_head.php";
                 </div>
 
                 <div class="mb-3">
-                    <button class="btn btn-primary">Guardar</button>
+                    <button class="btn btn-outline-secondary">Guardar</button>
                 </div>
             </form>
 
