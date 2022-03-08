@@ -8,7 +8,6 @@ $pagina="Staff";
 $error = "";
 
 try {
-
     # borrrar esto despues
     echo "<pre>";
     print_r($_POST);
@@ -23,20 +22,21 @@ try {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO category (name) values ('$name')";
+        $query = "INSERT INTO staff (name) VALUES ('$name')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 
-        $resultado = $conexion->query($query);
-
         if ($resultado) {
             $_SESSION['mensaje'] = "Datos insertados correctamente";
+            $script_alerta = 'alerta("Insertado", "Datos insertados correctamente", "success")';
         } else {
+            $script_alerta = 'alerta("error", "No se pudo insertar", "error")';
+
             throw new Exception("No se pudo insertar los datos");
         }
 
         //refrezcar
-        refrezcar('categorias.php');
+        //refrezcar('categorias.php');
     }
 
 
@@ -45,5 +45,5 @@ try {
     $error = $ex->getMessage();
 }
 
-
+# incluir vista
 require_once "vistas/vista_staff.php";

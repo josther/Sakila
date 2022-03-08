@@ -27,18 +27,14 @@
                 <input type="text" name="altura" class="form-control">
             </div>
 
-            <div clas="mb-3">
-                <label for="">Hipotenusa</label>
-                <input type="text" name="hiputenusa" class="form-control">
-            </div>
-
             <button class="btn btn-dark">Calcular</button>
 
         </form>
 
         <?php
 
-        print_r($_GET);
+            $Base = $_GET["Base"];
+            $Altura = $_GET["Altura"];
 
         ?>
     </div>
