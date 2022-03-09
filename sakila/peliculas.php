@@ -12,17 +12,19 @@ try {
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
+
     //verificar si le da click al boton
     if (isset($_POST['boton-guardar'])) {
         echo "guardando...";
         //variable
-        $name = $_POST["name"];
+        $title = $_POST["title"];
+        $description = $_POST["description"];
         //validaciones
         if(empty($name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO film (title) VALUES ('$name')";
+        $query = "INSERT INTO film (title, description) VALUES ('$title', '$description')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 

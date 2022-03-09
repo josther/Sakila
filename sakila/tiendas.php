@@ -12,17 +12,19 @@ try {
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
+
     //verificar si le da click al boton
     if (isset($_POST['boton-guardar'])) {
         echo "guardando...";
         //variable
-        $name = $_POST["name"];
+        $manager_staff_id = $_POST["manager_staff_id"];
+        $address_id = $_POST["address_id"];
         //validaciones
         if(empty($name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO store (name) VALUES ('$name')";
+        $query = "INSERT INTO store (manager_staff_id, address_id) VALUES ('$manager_staff_id', '$address_id')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 

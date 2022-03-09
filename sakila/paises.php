@@ -12,17 +12,18 @@ try {
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
+    
     //verificar si le da click al boton
-    if (isset($_POST['boton-guardar'])) {
+    if ( isset($_POST['boton-guardar']) ) {
         echo "guardando...";
         //variable
-        $name = $_POST["name"];
+        $country = $_POST["country"];
         //validaciones
-        if(empty($name)) {
-            throw new Exception("El nombre no puede estar vacio");
+        if(empty($country)) {
+            throw new Exception("El pais no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO country (country) VALUES ('$name')";
+        $query = "INSERT INTO country (country) VALUES ('$country')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 

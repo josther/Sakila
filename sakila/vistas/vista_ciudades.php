@@ -15,11 +15,31 @@ require_once "parte_head.php";
         <div class="row">
             <form class="col-6 " method="post">
                 <div class="mb-3">
-                    <label for="">Nombre</label>
-                    <input type="text" name="name" class="form-control">
+                    <label for="">Ciudad</label>
+                    <input type="text" name="city" class="form-control">
                 </div>
 
                 <div class="mb-3">
+
+                    <select class="form-select" name="country_id">
+                        <option value="" selected>Seleccione</option>
+
+                        <?php
+
+                        $query ="SELECT * FROM city";
+
+                        $resultado = mysqli_query($conexion, $query);
+
+                        if ($resultado) {
+                            while ($fila = mysqli_fetch_object($resultado)) {
+                                echo "<option value='$fila->country_id'>$fila->city</option>";
+                            }
+                        }
+
+                        ?>
+
+                    </select>
+                    <br>
                     <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
                 </div>
             </form>
@@ -31,61 +51,6 @@ require_once "parte_head.php";
             </div>
             <?php endif; ?>
 
-        </div>
-
-        <div class="row">
-            <div class="col-4 ">
-                <form class="input-group mb-3">
-                    <input type="text" name="buscador" class="form-control" placeholder="Buscador">
-                    <button class="btn btn-outline-secondary" type="submit" name="boton-buscar"><i
-                            class="bi bi-search"></i>Buscar</button>
-            </div>
-
-            </form>
-        </div>
-
-        <div class="row">
-            <div class="col-12 bg-">
-                <table class="table table-dark table table.striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">ID Ciudades</th>
-                            <th scope="col">Nombre Ciudad</th>
-                            <th scope="col">ID de pais</th>
-                            <th scope="col">Fecha de Actualisacion</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php 
-
-                    $query = "SELECt * FROM city";
-
-                    $buscador = $_GET['buscador'] ?? "";
-                    if ($buscador != ""){
-                        $query = "SELECT * FROM city WHERE city = '$buscador'";
-                    }
-
-
-                    $resultado = mysqli_query($conexion, $query);
-
-                    if ($resultado) {
-                        while($fila = mysqli_fetch_object($resultado)) {
-                            echo "
-                            <tr>
-                                <td>{$fila->city_id}</td>
-                                <td>{$fila->city}</td>
-                                <td>{$fila->country_id}</td>
-                                <td>{$fila->last_update}</td>
-                            </tr>";
-                        }
-                    }
-
-                    ?>
-                    </tbody>
-                </table>
-            </div>
         </div>
         <?php
         require_once "parte_footer.php"

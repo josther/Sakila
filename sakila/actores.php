@@ -12,17 +12,20 @@ try {
     echo "<pre>";
     print_r($_POST);
     echo "</pre>";
+
     //verificar si le da click al boton
     if (isset($_POST['boton-guardar'])) {
         echo "guardando...";
         //variable
-        $name = $_POST["name"];
+        $first_name = $_POST["first_name"];
+        $last_name = $_POST['last_name'];
+
         //validaciones
-        if(empty($name)) {
+        if(empty($first_name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO actor (first_name) VALUES ('$name')";
+        $query = "INSERT INTO actor (first_name, last_name) VALUES ('$first_name', 'last_name')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 
