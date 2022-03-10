@@ -15,7 +15,7 @@ require_once "parte_head.php";
         <div class="row">
             <form class="col-6 " method="post">
                 <div class="mb-3">
-                    <label for="">staff</label>
+                    <label for="">Nombre</label>
                     <input type="text" name="first_name" class="form-control">
                 </div>
 
@@ -38,9 +38,65 @@ require_once "parte_head.php";
                     ?>
 
                     </select>
-                    <br>       
-                    <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
                 </div>
+                <br>
+                <div class="mb-3">
+                    <label for="">Apellido</label>
+                    <input type="text" name="last_name" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                <select class="form-select" name="address-id">
+                    <optio selected>Seleccione</optio>
+
+                    <?php
+
+                    $query="SELECT * FROM staff";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->address_id'>$fila->last_name</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                </div>
+                <br>
+                <div class="mb=3">
+                    <label for="">Dirección</label>
+                    <input type="text" name="address_id" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                <select class="form-select" name="email">
+                    <option selected>Seleccione</option>
+
+                    <?php
+
+                    $query="SELECT * FROM staff";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($file = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->email'>$fila->address_id</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="">Correo</label>
+                    <input type="text" name="address_id" class="form-control">
+                </div>
+                <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
+                </div>
+
             </form>
 
             <?php if (!empty($error)): ?>

@@ -19,12 +19,14 @@ try {
         //variable
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
+        $address_id = $_POST["address_id"];
+        $email = $_POST["email"];
         //validaciones
         if(empty($name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO staff (first_name, last_name) VALUES ('$first_name', '$last_name')";
+        $query = "INSERT INTO staff (first_name, last_name, address_id, email) VALUES ('$first_name', '$last_name', '$address_id', '$email')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 
