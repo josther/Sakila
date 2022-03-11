@@ -18,30 +18,9 @@ require_once "parte_head.php";
                     <label for="">Ciudad</label>
                     <input type="text" name="city" class="form-control">
                 </div>
+                <br>
 
-                <div class="mb-3">
-
-                    <select class="form-select" name="country_id">
-                        <option value="" selected>Seleccione</option>
-
-                        <?php
-
-                        $query ="SELECT * FROM city";
-
-                        $resultado = mysqli_query($conexion, $query);
-
-                        if ($resultado) {
-                            while ($fila = mysqli_fetch_object($resultado)) {
-                                echo "<option value='$fila->country_id'>$fila->city</option>";
-                            }
-                        }
-
-                        ?>
-
-                    </select>
-                    <br>
                     <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
-                </div>
             </form>
 
             <?php if (!empty($error)): ?>

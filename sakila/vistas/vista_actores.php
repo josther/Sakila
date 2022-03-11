@@ -18,30 +18,15 @@ require_once "parte_head.php";
                     <label for=>Actores</label>
                     <input type="text" name="first_name" class="form-control">
                 </div>
-
+                <br>
+                
                 <div class="mb-3">
-
-                <select class="form-select" name="last_name">
-                    <option value="" selected>Seleccione</option>
-
-                    <?php
-
-                    $query ="SELECT * FROM actor";
-
-                    $resultado = mysqli_query($conexion, $query);
-
-                    if ($resultado) {
-                        while ($fila = mysqli_fetch_object($resultado)) {
-                            echo "<option value='$fila->last_name'>$fila->first_name</option>";
-                        }
-                    }
-
-                    ?>
-
-                    </select>
-                    <br>
-                    <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
+                    <label for=>Actores Apellido</label>
+                    <input type="text" name="last_name" class="form-control">
                 </div>
+                <br>
+                
+                <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
             </form>
 
             <?php if (!empty($error)): ?>

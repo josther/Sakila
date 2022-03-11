@@ -25,7 +25,7 @@ try {
             throw new Exception("El nombre no puede estar vacio");
         }
         //guardar
-        $query = "INSERT INTO actor (first_name, last_name) VALUES ('$first_name', 'last_name')";
+        $query = "INSERT INTO actor (first_name, last_name) VALUES ('$first_name', '$last_name')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 

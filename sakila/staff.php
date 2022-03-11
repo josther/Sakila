@@ -34,16 +34,8 @@ try {
             throw new Exception("El apellido no puede estar vacio");
         }
 
-        if(empty($address_id)) {
-            throw new Exception("La direccion no puede estar vacio");
-        }
-
         if(empty($email)) {
             throw new Exception("El correo no puede estar vacio");
-        }
-
-        if(empty($store_id)) {
-            throw new Exception("La tienda no puede estar vacio");
         }
 
         if(empty($username)) {

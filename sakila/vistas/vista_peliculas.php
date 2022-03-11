@@ -18,28 +18,9 @@ require_once "parte_head.php";
                     <label for="">Peliculas</label>
                     <input type="text" name="film" class="form-control">
                 </div>
-
-                <div class="mb-3">
-                <select class="form-select" name="description">
-                    <option value="" selected>Seleccione</option>
-
-                    <?php
-
-                    $query="SELECT * FROM film";
-
-                    $resultado = mysqli_query($conexion, $query);
-
-                    if ($resultado) {
-                        while ($fila = mysqli_fetch_object($resultado)) {
-                            echo "<option value='$fila->description'>$fila->title</option>";
-                        }
-                    }
-
-                    ?>
-
-                    </select>
-                    <br>
-                    <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
+                <br>
+                
+                <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
                 </div>
             </form>
 

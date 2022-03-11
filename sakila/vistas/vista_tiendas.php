@@ -18,28 +18,9 @@ require_once "parte_head.php";
                     <label for="">tiendas</label>
                     <input type="text" name="store" class="form-control">
                 </div>
-
-                <div class="mb-3">
-                <select class="form-select" name="adrres_id">
-                    <option selected>Seleccione</option>
-
-                    <?php
-
-                    $query="SELECT * FROM store";
-
-                    $resultado = mysqli_query($conexion, $query);
-
-                    if ($resultado) {
-                        while ($fila = mysqli_fetch_object($resultado)) {
-                            echo "<option value='$fila->addres_id'>$fila->manager_staff_id</option>";
-                        }
-                    }
-
-                    ?>
-
-                    </select>
-                    <br>
-                    <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
+                <br>
+                
+                <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
                 </div>
             </form>
 
