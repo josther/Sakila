@@ -19,14 +19,29 @@ try {
         //variable
         $first_name = $_POST["first_name"];
         $last_name = $_POST['last_name'];
+        $email = $_POST['email'];
+        $address_id = $_POST['address_id'];
 
         //validaciones
-        if(empty($name)) {
+        if(empty($first_name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
 
+        if(empty($last_name)) {
+            throw new Exception("El apellido no puede estar vacio");
+        }
+
+        if(empty($email)) {
+            throw new Exception("El coreo no puede estar vacio");
+        }
+
+        if(empty($address_id)) {
+            throw new Exception("La direcion no puede estar vacio");
+        }
+
         //guardar
-        $query = "INSERT INTO customer (first_name, last_name) VALUES ('$first_name', '$last_name')";
+        $query = "INSERT INTO customer (first_name, last_name, email, address_id)
+        VALUES ('$first_name', '$last_name', '$email'. '$address_id')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 

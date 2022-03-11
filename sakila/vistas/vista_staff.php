@@ -1,11 +1,8 @@
 <?php
-
-
 require_once "parte_head.php";
 ?>
 
 <body>
-
 
     <?php
     require_once "parte_menu.php";
@@ -21,7 +18,7 @@ require_once "parte_head.php";
 
                 <div class="mb-3">
                 <select class="form-select" name="last_name">
-                    <option selected>Seleccione</option>
+                    <option value="" selected>Seleccione</option>
 
                     <?php
 
@@ -40,6 +37,7 @@ require_once "parte_head.php";
                     </select>
                 </div>
                 <br>
+
                 <div class="mb-3">
                     <label for="">Apellido</label>
                     <input type="text" name="last_name" class="form-control">
@@ -47,7 +45,7 @@ require_once "parte_head.php";
 
                 <div class="mb-3">
                 <select class="form-select" name="address-id">
-                    <optio selected>Seleccione</optio>
+                    <optio value="" selected>Seleccione</optio>
 
                     <?php
 
@@ -65,14 +63,15 @@ require_once "parte_head.php";
                 </select>
                 </div>
                 <br>
-                <div class="mb=3">
+                
+                <div class="mb-3">
                     <label for="">Dirección</label>
                     <input type="text" name="address_id" class="form-control">
                 </div>
 
                 <div class="mb-3">
                 <select class="form-select" name="email">
-                    <option selected>Seleccione</option>
+                    <option value="" selected>Seleccione</option>
 
                     <?php
 
@@ -81,7 +80,7 @@ require_once "parte_head.php";
                     $resultado = mysqli_query($conexion, $query);
 
                     if ($resultado) {
-                        while ($file = mysqli_fetch_object($resultado)) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
                             echo "<option value='$fila->email'>$fila->address_id</option>";
                         }
                     }
@@ -90,10 +89,111 @@ require_once "parte_head.php";
                 </select>
                 </div>
                 <br>
+
                 <div class="mb-3">
                     <label for="">Correo</label>
-                    <input type="text" name="address_id" class="form-control">
+                    <input type="text" name="email" class="form-control">
                 </div>
+
+                <div class="mb-3">
+                <select class="form-select" name="store_id">
+                    <option value="" selected>Seleccione</option>
+
+                    <?php 
+
+                    $query="SELECT * FROM staff";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->store_id'>$fila->email</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                </div>
+                <br>
+                
+                <div class="mb-3">
+                    <label for="">Tienda</label>
+                    <input type="text" name="store_id" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                <select class="form-select" name="username">
+                    <option value="" selected>Seleccione</option>
+
+                    <?php
+
+                    $query="SELECT * FROM staff";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->username'>$fila->store_id</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                </div>
+                <br>
+
+                <div class="mb-3">
+                    <label for="">usuario</label>
+                    <input type="text" name="username" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                <select class="form-select" name="password">
+                    <option value="" selected>Seleccione</option>
+
+                    <?php
+
+                    $query="SELECT * FROM staff";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->password'>$fila->username</option>";
+                        }
+                    } 
+
+                    ?>
+                </select>
+                </div>
+                <br>
+
+                <div class="mb-3">
+                    <label for="">Contraseña</label>
+                    <input type="text" name=" password" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                <select class="form-select" name="last_update">
+                    <option value="" selected>Seleccione</option>
+
+                    <?php
+
+                    $query="SELECT * FROM staff";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->last_update'>$fila->password</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                </div>
+                <br>
+
                 <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
                 </div>
 

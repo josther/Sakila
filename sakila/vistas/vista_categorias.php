@@ -17,7 +17,6 @@ require_once "parte_head.php";
                 </div>
 
                 <div class="mb-3">
-
                 <select class="form-select" name="name">
                     <option value="" selected>Seleccione</option>
 

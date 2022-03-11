@@ -21,12 +21,42 @@ try {
         $last_name = $_POST["last_name"];
         $address_id = $_POST["address_id"];
         $email = $_POST["email"];
+        $store_id = $_POST["store_id"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        
         //validaciones
-        if(empty($name)) {
+        if(empty($first_name)) {
             throw new Exception("El nombre no puede estar vacio");
         }
+
+        if(empty($last_name)) {
+            throw new Exception("El apellido no puede estar vacio");
+        }
+
+        if(empty($address_id)) {
+            throw new Exception("La direccion no puede estar vacio");
+        }
+
+        if(empty($email)) {
+            throw new Exception("El correo no puede estar vacio");
+        }
+
+        if(empty($store_id)) {
+            throw new Exception("La tienda no puede estar vacio");
+        }
+
+        if(empty($username)) {
+            throw new Exception("El usuario no puede estar vacio");
+        }
+
+        if(empty($password)) {
+            throw new Exception("La contraseña no puede estar vacio");
+        }
+
         //guardar
-        $query = "INSERT INTO staff (first_name, last_name, address_id, email) VALUES ('$first_name', '$last_name', '$address_id', '$email')";
+        $query = "INSERT INTO staff (first_name, last_name, address_id, email, store_id, username, password,)
+        VALUES ('$first_name', '$last_name', '$address_id', '$email', '$store_id', '$username', '$password')";
 
         $resultado = $conexion->query($query) or die("Error en query");
 
