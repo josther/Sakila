@@ -13,14 +13,39 @@ require_once "parte_head.php";
     <div class="container">
         <h3><?php echo $pagina; ?></h3>
         <div class="row">
-            <form class="col-6 " method="post">
+            <form class="col-6" method="post">
                 <div class="mb-3">
                     <label for="">Ciudad</label>
                     <input type="text" name="city" class="form-control">
                 </div>
                 <br>
+            <class="col-6" method="post">
+                <div class="mb-3">
+                    <label for="">direccion de paises</label> 
+                </div>
+                
+                <div class="mb-3">
+                <select class="form-select" name="country-id">
+                    <option value="" selected>Seleccione</option>
 
-                    <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
+                    <?php
+
+                    $query ="SELECT * FROM city";
+
+                    $resultado = mysqli_query($conexion, $query);
+
+                    if ($resultado) {
+                        while ($fila = mysqli_fetch_object($resultado)) {
+                            echo "<option value='$fila->last_update'>$fila->country_id</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                </div>
+                <br>
+
+                <button name=boton-guardar class="btn btn-outline-secondary">Guardar</button>
             </form>
 
             <?php if (!empty($error)): ?>

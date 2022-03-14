@@ -13,7 +13,7 @@ require_once "parte_head.php";
     <div class="container">
         <h3><?php echo $pagina; ?></h3>
         <div class="row">
-            <form class="col-6 " method="post">
+            <form class="col-6" method="post">
                 <div class="mb-3">
                     <label for="">Clientes</label>
                     <input type="text" name="first_name" class="form-control">
@@ -32,9 +32,9 @@ require_once "parte_head.php";
                 </div>
                 <br>
 
+            <form class="col-6" method="post">
                 <div class="mb-3">
                     <label for="">direccion de los clientes</label>
-                    <input type="text" name="address_id" class="form-control">
                 </div>
 
                 <div class="mb-3">

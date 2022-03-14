@@ -10,7 +10,7 @@ require_once "parte_head.php";
     <div class="container">
         <h3><?php echo $pagina; ?></h3>
         <div class="row">
-            <form class="col-6 " method="post">
+            <form class="col-6" method="post">
                 <div class="mb-3">
                     <label for="">Nombre</label>
                     <input type="text" name="first_name" class="form-control">
@@ -22,14 +22,14 @@ require_once "parte_head.php";
                     <input type="text" name="last_name" class="form-control">
                 </div>
                 <br>
-                
+
+            <form clas="col-6" method="post">
                 <div class="mb-3">
                     <label for="">Dirección</label>
-                    <input type="text" name="address_id" class="form-control">
                 </div>
 
                 <div class="mb-3">
-                <select class="form-select" name="email">
+                <select class="form-select" name="address_id">
                     <option value="" selected>Seleccione</option>
 
                     <?php
@@ -54,14 +54,14 @@ require_once "parte_head.php";
                     <input type="text" name="email" class="form-control">
                 </div>
                 <br>
-                
+
+            <form class="col-6" method="post">
                 <div class="mb-3">
                     <label for="">Tienda</label>
-                    <input type="text" name="store_id" class="form-control">
                 </div>
 
                 <div class="mb-3">
-                <select class="form-select" name="username">
+                <select class="form-select" name="store_id">
                     <option value="" selected>Seleccione</option>
 
                     <?php
