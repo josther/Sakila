@@ -15,10 +15,10 @@ try {
     
     //verificar si le da click al boton
     if (isset($_POST['boton-guardar']) ) {
-    
+    }
 
             // buscar info para editar
-    if ($isser($_GET['boton-guardar'])) {
+    if (isset($_GET['boton-guardar'])) {
         $category_id = $_GET['editar'];
 
         $query = "SELECT * FROM category WHERE category_id = '$category_id' ";
@@ -48,23 +48,22 @@ try {
             $query = "UPDATE category SET name = '$name' WHERE category_id = '$id' ";
         }
 
-        $resultado = $conexion->query($query) or die("Error en query");
+        if (isset($_GET['eliminar'])) {
+            $category_id = $_GET['eliminar'];
+        
+            $query = "DELETE FROM category WHERE category_id = '$category_id' ";
 
-        if ($resultado) {
-            $_SESSION['mensaje'] = "Datos insertados correctamente";
-            $script_alerta = 'alerta("Insertado", "Datos insertados correctamente", "success")';
-        } else {
-            $script_alerta = 'alerta("error", "No se pudo insertar", "error")';
+            $resultado = $conexion->query($query) or die("Error en query");
 
-            throw new Exception("No se pudo insertar los datos");
+            if ($resultado) {
+                $script_alerta = 'alerta("Procesados", "Datos procesados correctamente", "success")';
+            } else {
+            $script_alerta = 'alerta("error", "No se pudo procesar", "error")';
+
+            throw new Exception("No se pudo porcesar los datos");
         }
-
-        //refrezcar
-        //refrezcar('categorias.php');
     }
 
-
-    throw new Exception("");
 } catch(Throwable $ex) {
     $error = $ex->getMessage();
 }
