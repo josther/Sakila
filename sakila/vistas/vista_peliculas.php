@@ -123,7 +123,7 @@ require_once "parte_head.php";
 
                 <div class="mb-3">
                     <label for="">longitud</label>
-                    <input type="text" name="legth" class="form-control">
+                    <input type="text" name="length" class="form-control">
                 </div>
                 <br>
 

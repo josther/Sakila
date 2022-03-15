@@ -35,10 +35,6 @@ try {
             throw new Exception("El coreo no puede estar vacio");
         }
 
-        if(empty($address_id)) {
-            throw new Exception("La direcion no puede estar vacio");
-        }
-
         //guardar
         $query = "INSERT INTO customer (first_name, last_name, email, address_id)
         VALUES ('$first_name', '$last_name', '$email'. '$address_id')";

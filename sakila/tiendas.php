@@ -21,7 +21,7 @@ try {
         $address_id = $_POST["address_id"];
         //validaciones
         if(empty($name)) {
-            throw new Exception("El nombre no puede estar vacio");
+            throw new Exception();
         }
         //guardar
         $query = "INSERT INTO store (manager_staff_id, address_id) VALUES ('$manager_staff_id', '$address_id')";

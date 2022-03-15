@@ -19,13 +19,14 @@ require_once "parte_head.php";
                     <input type="text" name="city" class="form-control">
                 </div>
                 <br>
+
             <class="col-6" method="post">
                 <div class="mb-3">
                     <label for="">direccion de paises</label> 
                 </div>
                 
                 <div class="mb-3">
-                <select class="form-select" name="country-id">
+                <select class="form-select" name="country_id">
                     <option value="" selected>Seleccione</option>
 
                     <?php
